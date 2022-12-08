@@ -1,0 +1,40 @@
+type Philosopher {
+    id: ID!
+    name: String!
+    born: Date
+    died: Date
+    quotes: [Quote]
+    domain: PhilosphyDomain! = STOICISM
+}
+
+type Quote {
+    id: ID!
+    date: Date
+    text: String!
+    saidBy: Philospher!
+
+}
+
+scalar Date
+
+enum PhilosophyDomain {
+    STOICISM
+    NIHILISM
+    BUDDISM
+}
+
+type Query {
+    Quote(id: ID!): Quote
+    Quotes(limit: Int, skip: Int, sort_field: String, sort_order: String): [Quote]
+    Philospher(domain: PhilosophyDomain!): Philosopher
+}
+
+type Mutation {
+    createQuote(
+        id: ID!
+        text: String
+        saidBy: Philosopher!
+
+    ) : Quote
+    deleteQuote(id: ID!): Quote
+}
