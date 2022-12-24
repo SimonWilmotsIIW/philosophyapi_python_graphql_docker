@@ -13,11 +13,15 @@ De GraphQLi interface is te vinden op de route
 **Consumatie**  
 De andere routes zijn te vinden in de navigatiebar op de route [/philosophers](http://127.0.0.1:5000/philosophers)
 
-## Afbeeldingen
+## Demos
 ### GraphQLi interface
-![GraphQLi interface](./media/graphqli_interface.png)
+![GraphQLi interface](./media/graphqli_interface.png)  
+
 ### Consumatie interface
-![Consumatie Interface](./media/philosopher_api_interface.png)
+![Consumatie Interface](./media/philosopher_api_interface.png)  
+
+### Demo
+![Demo](./media/philosophyapi_graphql_python_demo.gif)
 
 ## Technologies
 * Python (Flask, Graphene)
